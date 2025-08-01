@@ -13,7 +13,7 @@
 </p>
 
 <div align="center">
-  <img src="https://img.shields.io/github/repo-size/thebadhonbiswas/TheBadhon" alt="Repo Size">
+  <img src="https://img.shields.io/github/repo-size/thebadhonbiswas/TheBadhon?cacheSeconds=60" alt="Repo Size">
   <img src="https://img.shields.io/github/contributors/thebadhonbiswas/TheBadhon" alt="Contributors">
   <img src="https://img.shields.io/github/stars/thebadhonbiswas/TheBadhon?style=social" alt="Stars">
   <img src="https://img.shields.io/github/forks/thebadhonbiswas/TheBadhon?style=social" alt="Forks">
