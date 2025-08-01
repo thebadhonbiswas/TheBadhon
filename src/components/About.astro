@@ -1,0 +1,51 @@
+---
+const {} = Astro.props;
+---
+
+<section id="about">
+  <div class="about-container">
+    <h1>About Me</h1>
+    <p>
+      <strong>I am Badhon Biswas</strong> — a passionate <strong>student</strong>, <strong>web developer</strong>, and <strong>UI/UX designer</strong> based in Bangladesh.
+      I specialize in building <strong>modern</strong>, <strong>futuristic</strong>, and <strong>clean website designs</strong> with a focus on <strong>user experience</strong> and <strong>responsive development</strong>.
+    </p>
+    <p>
+      I love turning ideas into visually stunning and high-performance websites using technologies like <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and modern frameworks.
+      My mission is to write <strong>clean, maintainable code</strong> and design <strong>engaging digital experiences</strong> that stand out online.
+    </p>
+  </div>
+</section>
+<style>
+:root {
+  --primary: #ff6a00;
+  --secondary: #ffffff;
+  --accent: #ffe0c2;
+  --muted: #f5f5f5;
+  --border: #e0e0e0;
+  --highlight: #ffb266;
+  --info: #fef3e2;
+
+  /* Optional text colors */
+  --text-main: #333333;
+  --text-light: #666666;
+  }
+
+  .about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  }
+
+  h1 {
+  color: var(--text-main);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: -0.5rem;
+  }
+  p {
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 10px 0;
+  }
+</style>
