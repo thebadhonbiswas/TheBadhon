@@ -36,7 +36,8 @@
 
 ## 📸 Preview
 
-> _Add a screenshot or live preview GIF here if available_
+  <img src="./public/demo.png" width="400" alt="TheBadhon Logo">
+
 
 ---
 
