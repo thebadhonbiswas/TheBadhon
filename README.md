@@ -109,12 +109,4 @@ This project is open-source and available under the MIT License.
 
 
 
----
-
-Would you like me to:
-- add this directly to your repo's `README.md` file?
-- help generate a preview screenshot section?
-- add a dark mode toggle description?
-
-Let me know what else you'd like enhanced!
-
+©2025 All right reserved
