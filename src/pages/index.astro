@@ -6,22 +6,9 @@ import Skills from '../components/Skills.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<head>
-  <!-- Preload and then apply stylesheet -->
-  <link
-  rel="preload"
-  href="../components/styles/Nav.css"
-  as="style"
-  onload="this.rel='stylesheet'"
-  />
-<noscript>
-  <link rel="stylesheet" href="../components/styles/Nav.css" />
-</noscript>
-</head>
-
 <Layout>
-<Navbar />
-<Header />
-<About />
-<Skills />
+  <Navbar />
+  <Header />
+  <About />
+  <Skills />
 </Layout>
