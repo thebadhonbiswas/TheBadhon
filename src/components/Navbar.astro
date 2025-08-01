@@ -1,79 +1,63 @@
 ---
-const navCssHref = "/components/styles/Nav.css";
+import "../components/styles/Nav.css";
+const {} = Astro.props;
 ---
 
-<html lang="en">
-<head>
-  <link
-  rel="preload"
-  as="style"
-  href={navCssHref}
-  onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript>
-    <link rel="stylesheet" href={navCssHref} />
-</noscript>
-</head>
-<body>
-
 <nav aria-label="Main Navigation" role="navigation" style="position: relative;">
-<div class="nav-header">
-<!-- Logo Left -->
-<a href="/" class="logo" aria-label="Homepage">
-<img src="favicon.svg" alt="Badhon Biswas - Logo">
-</a>
+  <div class="nav-header">
+    <!-- Logo Left -->
+    <a href="/" class="logo" aria-label="Homepage">
+      <img src="favicon.svg" alt="Badhon Biswas - Logo">
+    </a>
 
-<!-- Menu Toggle Button Right -->
-<button id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
-<!-- Menu Icon -->
-<svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M4 12h16" />
-<path d="M4 18h16" />
-<path d="M4 6h16" />
-</svg>
+    <!-- Menu Toggle Button Right -->
+    <button id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+      <!-- Menu Icon -->
+      <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 12h16" />
+        <path d="M4 18h16" />
+        <path d="M4 6h16" />
+      </svg>
 
-<!-- Close Icon -->
-<svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-style="display: none;">
-<path d="M18 6 6 18" />
-<path d="m6 6 12 12" />
-</svg>
-</button>
-</div>
+      <!-- Close Icon -->
+      <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        style="display: none;">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+  </div>
 
-<!-- Animated Menu --><ul id="navMenu" role="menu">
-<li role="none">
-<a href="/" role="menuitem" aria-current={Astro.url.pathname === '/' ? 'page': undefined}>Home</a>
-</li>
-<li role="none">
-<a href="/about" role="menuitem" aria-current={Astro.url.pathname === '/about' ? 'page': undefined}>About</a>
-</li>
-<li role="none">
-<a href="/projects" role="menuitem" aria-current={Astro.url.pathname === '/projects' ? 'page': undefined}>Projects</a>
-</li>
-<li role="none">
-<a href="/contact" role="menuitem" aria-current={Astro.url.pathname === '/contact' ? 'page': undefined}>Contact</a>
-</li>
-</ul>
+  <!-- Animated Menu --><ul id="navMenu" role="menu">
+    <li role="none">
+      <a href="/" role="menuitem" aria-current={Astro.url.pathname === '/' ? 'page': undefined}>Home</a>
+    </li>
+    <li role="none">
+      <a href="/about" role="menuitem" aria-current={Astro.url.pathname === '/about' ? 'page': undefined}>About</a>
+    </li>
+    <li role="none">
+      <a href="/projects" role="menuitem" aria-current={Astro.url.pathname === '/projects' ? 'page': undefined}>Projects</a>
+    </li>
+    <li role="none">
+      <a href="/contact" role="menuitem" aria-current={Astro.url.pathname === '/contact' ? 'page': undefined}>Contact</a>
+    </li>
+  </ul>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-const toggleBtn = document.getElementById('menuToggle');
-const menu = document.getElementById('navMenu');
-const menuIcon = document.getElementById('menuIcon');
-const closeIcon = document.getElementById('closeIcon');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('menuToggle');
+    const menu = document.getElementById('navMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
 
-toggleBtn.addEventListener('click', () => {
-const isOpen = menu.classList.toggle('show');
-menuIcon.style.display = isOpen ? 'none': 'block';
-closeIcon.style.display = isOpen ? 'block': 'none';
-toggleBtn.setAttribute('aria-expanded', isOpen ? 'true': 'false');
-});
-});
-</script>
+    toggleBtn.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('show');
+    menuIcon.style.display = isOpen ? 'none': 'block';
+    closeIcon.style.display = isOpen ? 'block': 'none';
+    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true': 'false');
+    });
+    });
+  </script>
 </nav>
-
-</body>
-</html>
