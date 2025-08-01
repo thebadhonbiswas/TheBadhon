@@ -1,0 +1,170 @@
+---
+const {} = Astro.props;
+---
+
+<section id="skills">
+  <div class="skills-container">
+    <h1>Skills</h1>
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html">
+        <h2>html</h2>
+      </div>
+      <div class="badge">
+        Advance
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css">
+        <h2>css</h2>
+      </div>
+      <div class="badge">
+        Advance
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript">
+        <h2>javascript</h2>
+      </div>
+      <div class="badge">
+        Intermediate
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react">
+        <h2>react</h2>
+      </div>
+      <div class="badge">
+        Intermediate
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="vite">
+        <h2>vite</h2>
+      </div>
+      <div class="badge">
+        Intermediate
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="nextjs">
+        <h2>nextjs</h2>
+      </div>
+      <div class="badge">
+        Learning
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="astro">
+        <h2>astro</h2>
+      </div>
+      <div class="badge">
+        Intermediate
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="tailwindcss">
+        <h2>tailwind css</h2>
+      </div>
+      <div class="badge">
+        Learning
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs">
+        <h2>nodejs</h2>
+      </div>
+      <div class="badge">
+        Learning
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="warper">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="expressjs">
+        <h2>expressjs</h2>
+      </div>
+      <div class="badge">
+        Learning
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+:root {
+  --primary: #ff6a00;
+  --secondary: #ffffff;
+  --accent: #ffe0c2;
+  --muted: #f5f5f5;
+  --border: #e0e0e0;
+  --highlight: #ffb266;
+  --info: #fef3e2;
+
+  /* Optional text colors */
+  --text-main: #333333;
+  --text-light: #666666;
+  }
+
+  .skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 30px 1rem 30px;
+  }
+
+  h1 {
+  color: var(--text-main);
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  }
+  h2 {
+  margin: 0;
+  }
+  .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background: var(--info);
+  border: 3px solid var(--highlight);
+  border-radius: 17px;
+  }
+  .warper{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 4rem;
+  }
+  .warper img {
+  width: 40px;
+  }
+  h2 {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  }
+  .badge {
+  color: var(--muted);
+  background: var(--primary);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: 20px;
+  }
+</style>
