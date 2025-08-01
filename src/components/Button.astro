@@ -1,0 +1,51 @@
+---
+const { btn = "Button", btnlink = "#" } = Astro.props;
+---
+
+<div class="btn">
+  <a href={btnlink} target="_blank" rel="noopener noreferrer">
+    <button>{btn}</button>
+  </a>
+</div>
+
+<style>
+  .btn a {
+  text-decoration: none;
+  }
+  .btn button {
+  display: inline-block;
+  width: 9rem;
+  height: 3rem;
+  color: var(--text-main);
+  background: var(--primary);
+  border: 3px solid var(--highlight);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  /* Smooth and elegant transition */
+  transition:
+  transform 250ms ease,
+  box-shadow 250ms ease,
+  background 250ms ease,
+  border-color 250ms ease;
+
+  box-shadow: 0 6px 12px rgba(255, 106, 0, 0.3);
+  transform: perspective(1000px) translateZ(0);
+  }
+
+  .btn button:hover {
+  /* Hover: lift and gradient highlight */
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 12px 24px rgba(255, 106, 0, 0.35);
+  background: linear-gradient(135deg, var(--primary), var(--highlight));
+  border-color: var(--accent);
+  }
+
+  .btn button:active {
+  /* Pressed: subtle squash effect */
+  transform: scale(0.96) translateY(1px);
+  box-shadow: 0 4px 8px rgba(255, 106, 0, 0.2);
+  }
+</style>
