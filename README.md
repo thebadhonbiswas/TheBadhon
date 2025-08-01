@@ -1,141 +1,119 @@
-<!-- Improved compatibility of back to top link --><a id="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->     
+<!-- Logo -->
+<p align="center">
+  <img src="./public/logo.svg" width="150" alt="TheBadhon Logo">
+</p>
 
-<!-- PROJECT LOGO --><br />
+<h1 align="center">TheBadhon</h1>
+
+<p align="center">
+  A modern, minimal, and clean portfolio website built with <strong>Astro</strong>.
+  <br>
+  Designed and developed by <a href="https://github.com/thebadhonbiswas" target="_blank">Badhon Biswas</a>.
+</p>
+
 <div align="center">
-  <a href="https://github.com/thebadhonbiswas/TheBadhon">
-    <img src="./public/Logo.svg" alt="Logo" width="80" height="80">
-  </a>  <h3 align="center">TheBadhon</h3>  <p align="center">
-    A futuristic modern web project built using Astro.
-    <br />
-    <a href="https://github.com/thebadhonbiswas/TheBadhon"><strong>Explore the project »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/thebadhonbiswas/TheBadhon">View Demo</a>
-    &middot;
-    <a href="https://github.com/thebadhonbiswas/TheBadhon/issues">Report Bug</a>
-    &middot;
-    <a href="https://github.com/thebadhonbiswas/TheBadhon/issues">Request Feature</a>
-  </p>
-</div><details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#built-with">Built With</a></li>
-    <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>About The Project
+  <img src="https://img.shields.io/github/repo-size/thebadhonbiswas/TheBadhon" alt="Repo Size">
+  <img src="https://img.shields.io/github/contributors/thebadhonbiswas/TheBadhon" alt="Contributors">
+  <img src="https://img.shields.io/github/stars/thebadhonbiswas/TheBadhon?style=social" alt="Stars">
+  <img src="https://img.shields.io/github/forks/thebadhonbiswas/TheBadhon?style=social" alt="Forks">
+  <a href="https://github.com/thebadhonbiswas">
+    <img src="https://img.shields.io/github/followers/thebadhonbiswas?label=Follow&style=social" alt="Follow @thebadhonbiswas">
+  </a>
+</div>
 
-TheBadhon aims to showcase the capabilities of modern web development using Astro. The project leverages Astro’s fast performance and flexibility for building futuristic, contemporary web experiences.
+---
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>Built With
+## 🚀 Features
 
+- 🌐 Built with [Astro](https://astro.build)
+- 🎨 Clean and modern UI
+- ⚡ Optimized performance
+- 📱 Fully responsive design
+- 💻 Developer-friendly structure
 
+---
 
+## 📸 Preview
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>Getting Started
+> _Add a screenshot or live preview GIF here if available_
 
-To get a local copy up and running follow these steps:
+---
 
-Prerequisites
+## 📂 Project Structure
 
-Node.js and npm
+```bash
+/
+├── public/              # Static assets (logo, images)
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── layouts/         # Layout templates
+│   ├── pages/           # Site pages (Home, About, etc.)
+│   └── styles/          # Global and component styles
+├── astro.config.mjs     # Astro config
+└── package.json         # Project metadata and scripts
 
 
-npm install npm@latest -g
+---
 
-Installation
+🛠️ Installation
 
-1. Clone the repo
-
+# Clone the repo
 git clone https://github.com/thebadhonbiswas/TheBadhon.git
 
+# Navigate to project directory
+cd TheBadhon
 
-2. Install dependencies
-
+# Install dependencies
 npm install
 
-
-3. Start the development server
-
+# Start the dev server
 npm run dev
 
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>Usage
-
-Use this project as a starter or portfolio base for your futuristic modern web applications built with Astro.
-
-// Example Astro Component Usage
----
-import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
-  <h1>Hello from Astro!</h1>
-</Layout>
+🔗 Live Site
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>Roadmap
-
-[x] Project setup using Astro
-
-[x] Add modular components
-
-[ ] Add SEO support
-
-[ ] Add dark mode toggle
-
-[ ] Connect CMS or API for dynamic content
+👉 https://thebadhon.vercel.app
+(Replace with actual link if different)
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>Contributing
+---
 
-Contributions are what make the open source community such an amazing place. Any contributions you make are greatly appreciated.
+🙋‍♂️ About Me
 
-1. Fork the Project
+I'm Badhon Biswas, a passionate student and developer who loves building beautiful web experiences.
 
+Portfolio: badhonbiswas.vercel.app
 
-2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+YouTube: @thebadhonbiswas
 
+Telegram: @thebadhonbiswas
 
-3. Commit your Changes (git commit -m 'Add some AmazingFeature')
-
-
-4. Push to the Branch (git push origin feature/AmazingFeature)
-
-
-5. Open a Pull Request
+Instagram: @thebadhonbiswas
 
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>License
+---
 
-No license information provided.
+📄 License
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>Contact
-
-Badhon Biswas - @thebadhonbiswas - badhonraj1145@gmail.com
-
-Project Link: https://github.com/thebadhonbiswas/TheBadhon
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>Acknowledgments
-
-Astro Documentation
-
-Choose an Open Source License
-
-Shields.io
-
-Font Awesome
-
-GitHub Emoji Cheat Sheet
+This project is open-source and available under the MIT License.
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p><!-- MARKDOWN LINKS & IMAGES -->
+---
+
+> Made with ❤️ by Badhon Biswas
+
+
+
+---
+
+Would you like me to:
+- add this directly to your repo's `README.md` file?
+- help generate a preview screenshot section?
+- add a dark mode toggle description?
+
+Let me know what else you'd like enhanced!
+
