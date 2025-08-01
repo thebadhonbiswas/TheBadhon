@@ -1,5 +1,5 @@
 
-![Logo](public/Logo.svg)
+![Logo](./Logo.svg)
 
 # TheBadhon
 
