@@ -10,14 +10,20 @@ const {
 ---
 <header id="hero">
   <div class="container">
-   <img
-  src="https://ik.imagekit.io/badhon/tr:w-800,h-800,ar-1-1,cm-pad_resize,fo-auto,f-webp/logo.png?updatedAt=1754120088684"
-  alt="Badhon Biswas - Developer"
-  width="800"
-  height="800"
+<img
+  src="https://ik.imagekit.io/badhon/tr:w-364,h-364,q-90,f-auto/logo.png"
+  srcset="
+    https://ik.imagekit.io/badhon/tr:w-364,h-364,q-90,f-auto/logo.png 364w,
+    https://ik.imagekit.io/badhon/tr:w-512,h-512,q-90,f-auto/logo.png 512w,
+    https://ik.imagekit.io/badhon/tr:w-768,h-768,q-90,f-auto/logo.png 768w
+  "
+  sizes="(max-width: 480px) 364px, (max-width: 768px) 512px, 768px"
+  width="364"
+  height="364"
+  alt="Badhon Biswas"
+  loading="eager"
   decoding="async"
   fetchpriority="high"
-  style="max-width: 100%; height: auto;"
 />
     <h1>
       Hi, I'm <span class="highlight">Badhon Biswas</span>
