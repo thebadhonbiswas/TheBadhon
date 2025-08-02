@@ -1,4 +1,6 @@
 ---
+import Navbar from '../components/Navbar.astro';
+
 const {
   title = 'Badhon Biswas',
   description = 'Portfolio of Badhon Biswas – Web Developer & Designer',
@@ -43,6 +45,14 @@ const {
 
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
+    
+    <link
+      rel="preload"
+      as="image"
+      href="https://ik.imagekit.io/badhon/tr:w-800,h-800,ar-1-1,cm-pad_resize,fo-auto,f-webp/logo.png?updatedAt=1754120088684"
+      type="image/webp"
+      fetchpriority="high"
+    />
 
     <style>
       /* CSS Boilerplate */
@@ -69,8 +79,9 @@ const {
         text-decoration: underline;
       }
     </style>
-  </head>
+  </h>
   <body>
+    <Navbar />
     <slot />
   </body>
 </html>
