@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary: #ff6a00;
   --secondary: #ffffff;
@@ -6,8 +10,31 @@
   --border: #e0e0e0;
   --highlight: #ffb266;
   --info: #fef3e2;
-
   /* Optional text colors */
   --text-main: #333333;
   --text-light: #666666;
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  .bg-muted {
+    background-color: var(--muted);
+  }
+  .bg-info {
+    background-color: var(--info);
+  }
+  .border-highlight {
+    border-color: var(--highlight);
+  }
+  .text-main {
+    color: var(--text-main);
+  }
+  .text-light {
+    color: var(--text-light);
+  }
 }

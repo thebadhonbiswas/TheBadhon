@@ -1,170 +1,182 @@
 ---
-const {} = Astro.props;
+const skillCategories = [
+  {
+    category: "Frontend",
+    skills: [
+      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", level: 90 },
+      { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", level: 90 },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", level: 85 },
+      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", level: 80 },
+      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", level: 75 },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", level: 70 },
+      { name: "Vite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg", level: 85 },
+    ],
+  },
+  {
+    category: "Backend",
+    skills: [
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", level: 70 },
+      { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", level: 65 },
+    ],
+  },
+  {
+    category: "Tools & Others",
+    skills: [
+      { name: "Acode", icon: "https://ik.imagekit.io/badhon/acode.svg?updatedAt=1754239591261", level: 60 },
+      { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", level: 85 },
+      { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", level: 75 },
+      { name: "Cloudflare", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg", level: 65 },
+      { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", level: 80 },
+      { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", level: 85 },
+    ],
+  },
+];
 ---
 
-<section id="skills">
-  <div class="skills-container">
-    <h1>Skills</h1>
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html">
-        <h2>html</h2>
-      </div>
-      <div class="badge">
-        Advance
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css">
-        <h2>css</h2>
-      </div>
-      <div class="badge">
-        Advance
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript">
-        <h2>javascript</h2>
-      </div>
-      <div class="badge">
-        Intermediate
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react">
-        <h2>react</h2>
-      </div>
-      <div class="badge">
-        Intermediate
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="vite">
-        <h2>vite</h2>
-      </div>
-      <div class="badge">
-        Intermediate
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="nextjs">
-        <h2>nextjs</h2>
-      </div>
-      <div class="badge">
-        Learning
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="astro">
-        <h2>astro</h2>
-      </div>
-      <div class="badge">
-        Intermediate
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="tailwindcss">
-        <h2>tailwind css</h2>
-      </div>
-      <div class="badge">
-        Learning
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs">
-        <h2>nodejs</h2>
-      </div>
-      <div class="badge">
-        Learning
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="warper">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="expressjs">
-        <h2>expressjs</h2>
-      </div>
-      <div class="badge">
-        Learning
-      </div>
-    </div>
-  </div>
-</section>
 <style>
 :root {
   --primary: #ff6a00;
   --secondary: #ffffff;
   --accent: #ffe0c2;
-  --muted: #f5f5f5;
+  --muted: #fef3e2;
   --border: #e0e0e0;
   --highlight: #ffb266;
-  --info: #fef3e2;
-
-  /* Optional text colors */
+  --info: #fffaf3;
   --text-main: #333333;
   --text-light: #666666;
-  }
-
-  .skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 0 30px 1rem 30px;
-  }
-
-  h1 {
-  color: var(--text-main);
-  text-align: center;
-  font-size: 2rem;
-  margin: 0;
-  }
-  h2 {
-  margin: 0;
-  }
-  .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
+}
+.skill-card {
   background: var(--info);
-  border: 3px solid var(--highlight);
-  border-radius: 17px;
-  }
-  .warper{
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.06),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.skill-card:hover {
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.skill-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 550;
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.skill-title img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}.skill-title {
   display: flex;
   align-items: center;
-  gap: 10px;
-  height: 4rem;
-  }
-  .warper img {
-  width: 40px;
-  }
-  h2 {
-  color: var(--text-light);
+  gap: 12px;
+  font-weight: 550;
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+/* Section header styles */
+.section-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* কম gap */
+  font-weight: 700;
   font-size: 1.5rem;
-  }
-  .badge {
-  color: var(--muted);
-  background: var(--primary);
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 2px 10px;
-  border-radius: 20px;
-  }
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.section-header svg {
+  stroke: var(--primary);
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.2;
+  display: block;
+  margin-bottom: 2px; /* alignment fix */
+}
+
+/* Tailwind overrides for header text size */
+.text-3xl {
+  font-size: 1.7rem /* 36px */;
+  line-height: 2rem /* 40px */;
+}
+.progress-bar {
+  background-color: var(--accent);
+  border-radius: 999px;
+  overflow: hidden;
+  height: 8px;
+}
+.progress-fill {
+  background-color: var(--primary);
+  height: 100%;
+  border-radius: 999px;
+  transition: width 1s ease;
+}
 </style>
+
+<section id="skills" class="mb-12 px-6">
+  <div class="section-container">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Skills & Technologies</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      {skillCategories.map((category, index) => (
+        <div class="skill-card" key={category.category}>
+        <h3 class="text-4xl font-semibold mb-4 section-header">
+            {index === 0 && (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-smartphone">
+                <path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" />
+                <path d="M10 19v-3.96 3.15" />
+                <path d="M7 19h5" />
+                <rect width="6" height="10" x="16" y="12" rx="2" />
+              </svg>
+            )}
+            {index === 1 && (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server">
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                <line x1="6" x2="6.01" y1="6" y2="6" />
+                <line x1="6" x2="6.01" y1="18" y2="18" />
+              </svg>
+            )}
+            {index === 2 && (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tool-case">
+                <path d="M10 15h4" />
+                <path d="m14.817 10.995-.971-1.45 1.034-1.232a2 2 0 0 0-2.025-3.238l-1.82.364L9.91 3.885a2 2 0 0 0-3.625.748L6.141 6.55l-1.725.426a2 2 0 0 0-.19 3.756l.657.27" />
+                <path d="m18.822 10.995 2.26-5.38a1 1 0 0 0-.557-1.318L16.954 2.9a1 1 0 0 0-1.281.533l-.924 2.122" />
+                <path d="M4 12.006A1 1 0 0 1 4.994 11H19a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+              </svg>
+            )}
+            {category.category}
+          </h3>
+          <div class="space-y-4">
+            {category.skills.map(skill => (
+              <div key={skill.name}>
+                <div class="flex justify-between items-center mb-1">
+                  <div class="skill-title">
+                    <img src={skill.icon} class="w-5 h-5" alt={skill.name} /> {skill.name}
+                  </div>
+                  <span class="text-black font-bold">{skill.level}%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style={`width: ${skill.level}%`}></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
