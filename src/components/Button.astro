@@ -1,51 +1,81 @@
 ---
-const { btn = "Button", btnlink = "#" } = Astro.props;
+const { btn = "Button", btnlink = "#", variant = "primary" } = Astro.props;
+
+// The 'variant' prop can be "primary" or "secondary"
 ---
 
-<div class="btn">
+<div class:list={["btn", `btn--${variant}`]}>
   <a href={btnlink} target="_blank" rel="noopener noreferrer">
     <button>{btn}</button>
   </a>
 </div>
 
 <style>
+  /* Common styles for the container and link */
   .btn a {
-  text-decoration: none;
+    text-decoration: none;
   }
+
+  /* --- Base Button Styles (shared by all variants) --- */
   .btn button {
-  display: inline-block;
-  width: 9rem;
-  height: 3rem;
-  color: #070707;
-  background: var(--primary);
-  border: 3px solid var(--highlight);
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
+    display: inline-block;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 3px solid; /* Set border style here */
+    transform: perspective(1000px) translateZ(0);
 
-  /* Smooth and elegant transition */
-  transition:
-  transform 250ms ease,
-  box-shadow 250ms ease,
-  background 250ms ease,
-  border-color 250ms ease;
-
-  box-shadow: 0 6px 12px rgba(255, 106, 0, 0.3);
-  transform: perspective(1000px) translateZ(0);
-  }
-
-  .btn button:hover {
-  /* Hover: lift and gradient highlight */
-  transform: scale(1.05) translateY(-4px);
-  box-shadow: 0 12px 24px rgba(255, 106, 0, 0.35);
-  background: linear-gradient(135deg, var(--primary), var(--highlight));
-  border-color: var(--accent);
+    /* Smooth and elegant transition for all properties */
+    transition: all 250ms ease;
   }
 
   .btn button:active {
-  /* Pressed: subtle squash effect */
-  transform: scale(0.96) translateY(1px);
-  box-shadow: 0 4px 8px rgba(255, 106, 0, 0.2);
+    /* Universal pressed effect */
+    transform: scale(0.96) translateY(1px);
+  }
+
+
+  /* === Primary Button Styles === */
+  .btn--primary button {
+    color: #fef3e2;
+    background: var(--primary);
+    border-color: var(--highlight);
+    box-shadow: 0 6px 12px rgba(255, 106, 0, 0.3);
+  }
+
+  .btn--primary button:hover {
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 12px 24px rgba(255, 106, 0, 0.35);
+    background: linear-gradient(135deg, var(--primary), var(--highlight));
+    border-color: var(--accent);
+  }
+
+  .btn--primary button:active {
+    box-shadow: 0 4px 8px rgba(255, 106, 0, 0.2);
+  }
+
+
+  /* === Secondary Button Styles (Outline) === */
+  .btn--secondary button {
+    color: var(--primary);
+    background: transparent;
+    border-color: var(--primary);
+    box-shadow: none; /* No initial shadow */
+  }
+
+  .btn--secondary button:hover {
+    transform: scale(1.05) translateY(-4px);
+    background: var(--primary);
+    color: #fef3e2;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn--secondary button:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: var(--highlight); /* Use highlight color on press */
+    border-color: var(--highlight);
   }
 </style>
