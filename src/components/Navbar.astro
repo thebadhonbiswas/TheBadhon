@@ -1,5 +1,4 @@
 ---
-import "../components/styles/Nav.css";
 const {} = Astro.props;
 ---
 
@@ -61,3 +60,182 @@ const {} = Astro.props;
     });
   </script>
 </nav>
+
+
+
+<style>
+:root {
+  --primary: #ff6a00;
+  --secondary: #ffffff;
+  --accent: #ffe0c2;
+  --muted: #f5f5f5;
+  --border: #e0e0e0;
+  --highlight: #ffb266;
+  --info: #fef3e2;
+
+  /* Optional text colors */  
+  --text-main: #333333;  
+  --text-light: #666666;  
+}  
+
+/* ========================================
+  Mobile & Tablet Styles (Default)
+  ========================================
+*/
+nav {  
+  position: relative;  
+  font-family: system-ui, sans-serif;  
+}  
+
+.nav-header {  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  height: 60px;  
+  background: transparent;  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  padding: 0 1rem;  
+  z-index: 1200;  
+}  
+
+.logo {  
+  display: flex;  
+  align-items: center;  
+  gap: 0.5rem;  
+  text-decoration: none;  
+  font-weight: 700;  
+  font-size: 1.5rem;  
+}  
+
+.logo img {  
+  width: 3rem;  
+}  
+
+#menuToggle {  
+  background-color: #222;  
+  border: none;  
+  border-radius: 0.375rem;  
+  padding: 0.5rem;  
+  cursor: pointer;  
+  color: white;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+}  
+
+#menuToggle:hover,  
+#menuToggle:focus {  
+  background-color: #444;  
+  outline: none;  
+}  
+
+nav ul {  
+  list-style: none;  
+  flex-direction: column;  
+  align-items: flex-start;  
+  justify-content: flex-start;  
+  gap: 0.7rem;  
+  padding: 8rem 0 0 2rem;  
+  margin: 0;  
+  background-color: var(--accent);  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  height: 100vh;  
+  transform: translateY(-100%);  
+  transition: transform 0.4s ease-in-out;  
+  z-index: 1100;  
+  display: flex;  
+}  
+
+nav ul.show {  
+  transform: translateY(0);  
+}  
+
+nav a {  
+  text-decoration: none;  
+  font-size: 3rem;  
+  font-weight: 700;  
+  color: #1d4ed8;  
+}  
+
+nav a:hover,  
+nav a:focus {  
+  text-decoration: underline;  
+}  
+
+nav a[aria-current="page"] {  
+  text-decoration: underline;  
+  text-underline-offset: 2px;  
+}
+
+/* ========================================
+  Desktop Styles (Screen width > 768px)
+  ========================================
+*/
+@media (min-width: 768px) {
+  /* Hide the mobile menu toggle button on desktops */
+  #menuToggle {
+    display: none;
+  }
+
+  /* Transform the main nav into a horizontal bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 70px; /* A standard header height */
+    background-color: var(--secondary);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Reset the header wrapper */
+  .nav-header {
+    position: static;
+    background: transparent;
+    padding: 0;
+    height: auto;
+  }
+  
+  /* Convert the menu from a full-screen overlay to an inline list */
+  nav ul {
+    position: static;
+    transform: none; /* Make it visible by default */
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    
+    flex-direction: row; /* Display links horizontally */
+    align-items: center;
+    gap: 1.5rem; /* Adjust spacing between links */
+  }
+
+  /* Adjust link styles for a more traditional desktop nav bar */
+  nav a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-main);
+  }
+
+  /* Enhance hover/focus and current page styles for desktop */
+  nav a:hover,
+  nav a:focus {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  nav a[aria-current="page"] {
+    color: var(--primary);
+    font-weight: 700;
+  }
+}
+
+</style>
